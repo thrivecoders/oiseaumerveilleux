@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/assets/favicon1.png" type="image/x-icon">
+  <link rel="stylesheet" href="partner.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <title>Our Partners</title>
+</head>
+
+<body>
+<div class="hamburger-Menu">
+  <ul class="navList">
+    <li class="navItems" id="navItem6"> <a href="/index.html"> HOME</a></li>
+    <li class="navItems" id="navItem1"> <a href="/about-us.html"> ABOUT </a></li>
+    <li class="navItems" id="navItem4"> <a href="/aboutproducts.html"> PRODUCTS</li>
+    <li class="navItems" id="navItem2"> <a href="/merch.html"> MERCH</a></li>
+    <li class="navItems" id="navItem6"> <a href="/new.html"> PARTNER WITH US</a></li>
+    <li class="navItems" id="navItem3"> <a href="/press.html"> PRESS & MEDIA</a></li>
+    <li class="navItems" id="navItem9"> <a href="/contact.html"> CONTACT US</a></li>
+  </ul>
+  <img src="/assets/pngegg.png" alt="" class="close-Icon">
+</div>
+<div class="navIcons">
+
+  <div class="hamburger">
+    <img src="/assets/menu-edited.png" alt="Hamburger Icon" id="hamburger-Image" />
+  </div>
+</div>
+<div class="bgContainer"> </div>
+<div class="outerContainer">
+  <div class="container">
+    <div class="headerContainer">
+      <img src="/assets/partners names/1edited.png" alt="" class="partnerHeader" />
+      <img src="/assets/WHITE titles new/9.png" alt="" class="partnerHeaderMob" />
+    </div>
+    <div class="outerGrid">
+      <div class="outer">
+        <div class="grid">
+          <img src="/assets/partners names/2edited.png" alt="" class="partnerImg" id="partnerImg1" />
+          <img src="/assets/partners names/3edited.png" alt="" class="partnerImg" id="partnerImg2" />
+          <img src="/assets/partners names/4edited.png" alt="" class="partnerImg" id="partnerImg3" />
+          <img src="/assets/partners names/5edited.png" alt="" class="partnerImg" id="partnerImg4" />
+          <img src="/assets/partners names/6edited.png" alt="" class="partnerImg" id="partnerImg5" />
+          <img src="/assets/partners names/7edited.png" alt="" class="partnerImg" id="partnerImg6" />
+          <img src="/assets/partners names/8edited.png" alt="" class="partnerImg" id="partnerImg7" />
+          <img src="/assets/partners names/9edited.png" alt="" class="partnerImg" id="partnerImg8" />
+          <img src="/assets/partners names/10edited.png" alt="" class="partnerImg" id="partnerImg9" />
+        </div>
+      </div>
+    </div>
+    <button id="scroll"><img src="/assets/rightIcon2.png" alt="" /></button>
+    <div class="pageTwo">
+      <h1 class="header headerOne">
+        Become Our Partner - Wholesale, Distribution or Franchise Program
+      </h1>
+      <p class="para paraOne">
+        If you’d like to become our partner, purchase from us at wholesale
+        prices, re-sell, or distribute our exquisite products, or become a
+        Franchise owner please send us an enquiry and schedule a call with
+        one of our sales managers. <br /><br />
+
+        We’re always open to new partnerships and opportunities, however we
+        do get approached A LOT, so we’ve developed a simple process to
+        identify if we may be a good fit, then set you up as a partner.
+        <br /><br />
+
+        PLEASE NOTE : We are a wholesale company and the minimum order
+        quantity for our wholesale program varies per product. - This
+        website is not a retail store. Please contact us for detailed
+        products description, FDA certificates, lists of ingredients and
+        price. <br /><br />
+
+        <span> To start, please send us an inquiry mail and request our application questionnaire so we can better
+          understand you, your business, and what type of partnership you have in mind. We'll review your answers, then
+          be in touch to let you know.</span> <br /><br />
+        Thank you for your interest in our products.
+      </p>
+    </div>
+  </div>
+
+</div>
+<script>
+
+
+  const hamburger = document.querySelector(".hamburger");
+  const hamburgerMenu = document.querySelector(".hamburger-Menu")
+  const closeIcon = document.querySelector(".close-Icon")
+  hamburger.addEventListener("click", () => {
+    hamburgerMenu.style.height = "100vh";
+  })
+  closeIcon.addEventListener("click", () => {
+    hamburgerMenu.style.height = "0";
+  })
+
+
+  const scroll = document.querySelector("#scroll");
+  const grid = document.querySelector(".grid");
+  scroll.addEventListener("mouseover", () => {
+    grid.style.animationPlayState = "running";
+  });
+  scroll.addEventListener("mouseout", () => {
+    grid.style.animationPlayState = "paused";
+  });
+  let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const ele = document.querySelector(".grid");
+    ele.style.cursor = "grab";
+
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+    const mouseDownHandler = function (e) {
+      ele.style.cursor = "grabbing";
+      ele.style.userSelect = "none";
+
+      pos = {
+        left: ele.scrollLeft,
+        top: ele.scrollTop,
+        // Get the current mouse position
+        x: e.clientX,
+        y: e.clientY,
+      };
+
+      document.addEventListener("mousemove", mouseMoveHandler);
+      document.addEventListener("mouseup", mouseUpHandler);
+    };
+
+    const mouseMoveHandler = function (e) {
+      // How far the mouse has been moved
+      const dx = e.clientX - pos.x;
+      const dy = e.clientY - pos.y;
+
+      // Scroll the element
+      ele.scrollTop = pos.top - dy;
+      ele.scrollLeft = pos.left - dx;
+    };
+
+    const mouseUpHandler = function () {
+      ele.style.cursor = "grab";
+      ele.style.removeProperty("user-select");
+
+      document.removeEventListener("mousemove", mouseMoveHandler);
+      document.removeEventListener("mouseup", mouseUpHandler);
+    };
+
+    // Attach the handler
+    ele.addEventListener("mousedown", mouseDownHandler);
+  });
+</script>
+</body>
+
+</html>

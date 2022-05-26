@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/assets/favicon1.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <title>Legal Terms Of Use</title>
+</head>
+<style>
+  html {
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+    word-spacing: 3px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: black;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .bgContainer {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(26, 26, 26, 0.514) url(/assets/background4.jpg);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    z-index: -4;
+    top: 0;
+  }
+
+  .headerContainer {
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 5vh auto;
+
+  }
+
+  .partnerHeader {
+    width: 25vw;
+    padding-right: 5vw;
+    padding-bottom: 3vh;
+
+  }
+
+  .outerContainer {
+    width: 100vw;
+  }
+
+
+  .outer {
+    margin-top: 40vh;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 20vh;
+    min-width: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .outerGrid {
+    height: 20vh;
+    min-width: 100vh;
+    background: black;
+    margin-top: -35vh;
+    margin-bottom: 5vh;
+  }
+
+  .grid {
+    display: flex;
+    gap: 25vw;
+    align-items: center;
+    height: 20vh;
+    min-width: 80vh;
+    transition: all 1s;
+    animation: scroll 15s linear infinite alternate both paused;
+
+  }
+
+  @keyframes scroll {
+    100% {
+      transform: translateX(-280vw);
+    }
+  }
+
+  .paraOne {
+    color: white;
+    font-size: 1.7vw;
+    margin: 0 8vw;
+    text-align: left;
+  }
+
+  .headerOne,
+  .thank {
+    color: white;
+    font-size: 1.7vw;
+    margin: 0 8vw;
+    text-align: center;
+
+
+  }
+
+  .headerOne {
+    font-size: 3.5vw;
+    color: gold;
+  }
+
+  .pageTwo {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.476);
+  }
+
+
+
+
+  .partnerImg {
+    width: 30vw;
+  }
+
+  #partnerImg1 {
+
+    min-width: 20vw;
+  }
+
+  button {
+    position: absolute;
+    left: 90vw;
+    border: none;
+    padding: 0px;
+    border-radius: 1rem;
+  }
+
+  .hamburger-Menu {
+    font-family: 'Red Hat Text', sans-serif;
+    width: 100vw;
+    height: 0vh;
+    background: rgba(0, 0, 0, 0.699);
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+  }
+
+  .navList {
+    list-style: none;
+
+    width: 60vw;
+
+  }
+
+  .navItems>a {
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in;
+    font-size: 5vw;
+    font-weight: 700;
+    text-shadow: 0px 10px 20px rgb(0, 0, 0);
+  }
+
+  .navItems>a:hover {
+    font-size: 6vw;
+  }
+
+  .close-Icon {
+    height: 5vw;
+    width: 5vw;
+    margin-left: 5vw;
+    cursor: pointer;
+    margin-right: 10rem;
+  }
+
+  .navIcons {
+    display: flex;
+    gap: 1rem;
+    position: fixed;
+    z-index: 6;
+    top: 7vh;
+    left: 0vw;
+    width: 95vw;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .back {
+    padding: 1rem 3rem;
+    background: rgb(255, 255, 255);
+    height: 6vh;
+    min-width: 9vw;
+    color: black;
+    font-weight: 600;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+
+  #hamburger-Image {
+    width: 3vw;
+    cursor: pointer;
+  }
+
+  .wholesale {
+    display: none;
+  }
+
+  .wholesaleMob {
+    width: 50vw;
+    margin-inline: 25vw;
+    margin-top: 5vh;
+    opacity: 0;
+    transition: all 0.8s ease-in;
+  }
+
+
+
+
+  .para,
+  .thank {
+    font-size: clamp(14px, 1vw, 20px);
+
+
+  }
+
+  .para {
+    min-height: 20vh;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 5vw;
+    line-height: 3.5vh;
+    place-items: center;
+    padding-block: 5vh;
+    text-align: left;
+    font-size: 18px;
+  }
+
+
+  @media only screen and (max-width:768px) {
+    html {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    body {
+      max-width: 100vw;
+
+      display: flex;
+      align-items: center;
+
+    }
+
+    .hamburger-Menu {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.699);
+      position: fixed;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      left: -100vw;
+      transition: all 1s ease-in-out;
+    }
+
+    .navList {
+      margin-top: 10vh;
+      list-style: none;
+      width: 80vw;
+    }
+
+    .navItems>a {
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      color: rgb(255, 255, 255);
+      transition: all 0.2s ease-in;
+      font-size: 10vw;
+      font-weight: 700;
+      text-shadow: 0px 10px 20px rgb(0, 0, 0);
+
+    }
+
+    .navItems>a:hover {
+      font-size: 12vw;
+    }
+
+    .close-Icon {
+      height: 10vw;
+      width: 10vw;
+      cursor: pointer;
+    }
+
+    .navIcons {
+      width: 100vw;
+      height: fit-content;
+      background: rgba(0, 0, 0, 0.479);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      z-index: 3;
+      border-bottom: 1px solid gold;
+      opacity: 1;
+      transition: all 1s ease-in-out;
+    }
+
+    #hamburger-Image {
+      width: 10vw;
+      margin: 2.5vh 0;
+    }
+
+    .hamBurger {
+      cursor: pointer;
+      display: grid;
+      gap: 1rem;
+      place-items: center;
+      margin-left: 3.5rem;
+      margin-top: 5rem;
+
+    }
+
+    .para {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .paraOne {
+      margin: 7vh 5vw;
+
+
+    }
+
+    .wholesale {
+      display: none;
+    }
+
+    .wholesaleMob {
+      margin-top: 25vw;
+      width: 94vw;
+      margin-inline: 3vw;
+    }
+
+    .outerGrid {
+      height: 20vh;
+      max-width: 100vh;
+      background: black;
+      margin-top: -35vh;
+      margin-bottom: 5vh;
+    }
+
+    #scroll {
+      left: 85vw;
+    }
+  }
+</style>
+
+<body>
+  <div class="hamburger-Menu">
+    <ul class="navList">
+      <li class="navItems" id="navItem6"> <a href="/index.html"> HOME</a></li>
+      <li class="navItems" id="navItem1"> <a href="/about-us.html"> ABOUT </a></li>
+      <li class="navItems" id="navItem4"> <a href="/aboutproducts.html"> PRODUCTS</li>
+      <li class="navItems" id="navItem2"> <a href="/merch.html"> MERCH</a></li>
+      <li class="navItems" id="navItem6"> <a href="/new.html"> PARTNER WITH US</a></li>
+      <li class="navItems" id="navItem3"> <a href="/press.html"> PRESS & MEDIA</a></li>
+      <li class="navItems" id="navItem9"> <a href="/contact.html"> CONTACT US</a></li>
+      <li class="navItems" id="navItem9"> <a href="/terms.html"> LEGAL TERM OF USE</a></li>
+    </ul>
+    <img src="/assets/pngegg.png" alt="" class="close-Icon">
+  </div>
+  <div class="navIcons">
+
+    <div class="hamburger">
+      <img src="/assets/menu-edited.png" alt="Hamburger Icon" id="hamburger-Image" />
+    </div>
+  </div>
+  <div class="bgContainer"> </div>
+  <div class="outerContainer">
+    <div class="container">
+      <div class="pageTwo">
+        <img src="/assets/wholesale1.png" alt="" class="wholesale">
+        <!-- <img src="/assets/WHITE titles new/9.png" alt="" class="wholesaleMob"> -->
+        <img class="wholesaleMob" src="./assets/10 Legal.png" alt="">
+        <p class="para paraOne"><span>
+            You accept this agreement by viewing www.oiseaumerveilleux.com website Or by accessing any content through it, including our RSS feed
+
+            
+           <br> All intellectual Property on this Website www.oiseaumerveilleux.com (OM.com/OM further) including but not limited to designs, brand, Logo, concepts, texts, website content, website design and ideas belong to the owner of OM.com/ ÔLAB group. <br><br>
+            The Viewer of this Website OM is only authorised to view temporary the website and with the above exception, it is expressly forbidden to the User the reproduction, transformation, distribution, public communication, public disposal, extraction, reuse, forwarding and/or use of any nature by any means or procedure, of any of them, except where it is legally permitted or authorised expressly and in writing by the owner of OM.com/ÔLAB group. <br><br>
+            By way of example but not limited to it, the Viewer is Not authorised to: <br>
+            Use the information contained from the document for the purpose of developing commercial activities or professional nature (direct sales or any other commercial purpose as well as marketing in any way with this information) <br><br>
+            Delete, avoid or manipulate the copyright and other identifying data of ÔLAB Group’s/Owner’s of OM.com rights, as well as any protection mechanisms Disassemble, decompile or invert the content in which Website’s information is stored for any other reasons than discussed with OM.com owner /ÔLAB group. <br>
+            NO LICENSE: Nothing in this Agreement is intended to grant any rights to any party under any patent, mask work right, copyright, trade secret or other intellectual property right of the other party, nor shall this Disclaimer grant any party any rights in or to the Confidential Information shared by the owner of the other party except as expressly set forth here in. <br><br>
+            Unauthorised use of the content of this Document (Website OM.com) and any damage caused to the Owner’s of OM/ÔLAB Group’s intellectual property rights may result in ÔLAB group/the owner of OM.Com taking whatever action to which they may be entitled by law, and in any liabilities that may arise <br>
+            All rights reserved © 2022
+            <br /><br /></span>
+          <!-- <span>
+            PLEASE NOTE : <br> We are a wholesale company and the minimum order
+            quantity for our wholesale program varies per product. - This
+            website is not a retail store. Please contact us for detailed
+            products description, FDA certificates, lists of ingredients and
+            price.
+
+            To start, please send us an inquiry mail and request our application questionnaire so we can better
+            understand you, your business, and what type of partnership you have in mind. We'll review your answers,
+            then be in touch to let you know. <br /><br /></span> -->
+        </p>
+
+      </div>
+      <!-- <div class="headerContainer">
+        <img src="/assets/partners names/1edited.png" alt="" class="partnerHeader" />
+      </div> -->
+
+      <div class="outerGrid" style="display: none">
+        <div class="outer">
+          <div class="grid">
+            <img src="/assets/partners names/ducros.00.png" alt="" class="partnerImg" id="partnerImg1" />
+            <img src="/assets/partners names/3edited.png" alt="" class="partnerImg" id="partnerImg2" />
+            <img src="/assets/partners names/4edited.png" alt="" class="partnerImg" id="partnerImg3" />
+            <img src="/assets/partners names/5edited.png" alt="" class="partnerImg" id="partnerImg4" />
+            <img src="/assets/partners names/6edited.png" alt="" class="partnerImg" id="partnerImg5" />
+            <img src="/assets/partners names/7edited.png" alt="" class="partnerImg" id="partnerImg6" />
+            <img src="/assets/partners names/8edited.png" alt="" class="partnerImg" id="partnerImg7" />
+            <img src="/assets/partners names/9edited.png" alt="" class="partnerImg" id="partnerImg8" />
+            <img src="/assets/partners names/10edited.png" alt="" class="partnerImg" id="partnerImg9" />
+
+          </div>
+          <button id="scroll"><img src="/assets/rightIcon2.png" alt="" /></button>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <script>
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      const hamburger = document.querySelector(".hamburger");
+            const hamburgerMenu = document.querySelector(".hamburger-Menu")
+            const closeIcon = document.querySelector(".close-Icon")
+            hamburger.addEventListener("click", () => {
+                hamburgerMenu.style.left = "0";
+                hamburgerMenu.style.height = "100vh";
+            })
+            closeIcon.addEventListener("click", () => {
+                hamburgerMenu.style.height = "0vw";
+                hamburgerMenu.style.left = "-100vw";
+            })
+
+
+      const scroll = document.querySelector("#scroll");
+      const grid = document.querySelector(".grid");
+      scroll.addEventListener("mouseover", () => {
+        grid.style.animationPlayState = "running";
+      });
+      scroll.addEventListener("mouseout", () => {
+        grid.style.animationPlayState = "paused";
+      });
+
+
+
+      const paraOne = document.querySelector(".paraOne");
+      const wholesale = document.querySelector(".wholesaleMob");
+      setTimeout(() => {
+        wholesale.style.opacity = "1"
+      }, 500);
+      setTimeout(() => {
+        paraOne.style.opacity = "1"
+      }, 1200);
+    }
+    if (window.matchMedia("(max-width: 768px)").matches) {
+
+
+      const paraOne = document.querySelector(".paraOne");
+      const wholesale = document.querySelector(".wholesaleMob");
+      setTimeout(() => {
+        wholesale.style.opacity = "1"
+      }, 500);
+      setTimeout(() => {
+        paraOne.style.opacity = "1"
+      }, 1200);
+
+
+
+      const scroll = document.querySelector("#scroll");
+      const grid = document.querySelector(".grid");
+      scroll.addEventListener("mouseover", () => {
+        grid.style.animationPlayState = "running";
+      });
+      scroll.addEventListener("mouseout", () => {
+        grid.style.animationPlayState = "paused";
+      });
+
+
+
+      const closeIcon2 = document.querySelector(".close-Icon2")
+            const closeIcon = document.querySelector(".close-Icon")
+            const otherBurger = document.querySelector(".hamburger");
+            const otherMenu = document.querySelector(".hamburger-Menu")
+
+            otherBurger.addEventListener("click", () => {
+                otherMenu.style.left = "0vw";
+            })
+            closeIcon.addEventListener("click", () => {
+                otherMenu.style.left = "-100vw";
+            })
+
+    } 
+  </script>
+</body>
+
+</html>

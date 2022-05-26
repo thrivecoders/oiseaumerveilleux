@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/favicon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" />
+    <!-- <link rel="stylesheet" href="mobile.css" /> -->
+    <link rel="stylesheet" href="aboutus.css" />
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Reach Us Out</title>
+</head>
+
+<style>
+
+    .fill-form{
+        width: 250px;
+        height: 30px;
+        padding-left: 12px;
+        padding-top: 4px;
+       
+    }
+    .fill-form:focus{
+        border: 2px goldenrod solid!important;
+    }
+    
+    @media only screen and (max-width:768px) {
+        .fill-form{
+        width: 200px;
+       
+       
+    }
+    }
+
+</style>
+
+<body>
+    <div class="outerContainer">
+        <div class="hamburger-Menu">
+            <ul class="navList">
+                <li class="navItems" id="navItem6"> <a href="/index.html"> HOME</a></li>
+                <li class="navItems" id="navItem1"> <a href="/about-us.html"> ABOUT </a></li>
+                <li class="navItems" id="navItem4"> <a href="/aboutproducts.html"> PRODUCTS</li>
+                <li class="navItems" id="navItem2"> <a href="/merch.html"> MERCH</a></li>
+                <li class="navItems" id="navItem6"> <a href="/new.html"> PARTNER WITH US</a></li>
+                <li class="navItems" id="navItem3"> <a href="/press.html"> PRESS & MEDIA</a></li>
+                <li class="navItems" id="navItem9"> <a href="/contact.html"> CONTACT US</a></li>
+                <li class="navItems" id="navItem9"> <a href="/terms.html"> LEGAL TERM OF USE</a></li>
+            </ul>
+            <img src="/assets/pngegg.png" alt="" class="close-Icon">
+        </div>
+        <div class="navIcons">
+
+            <div class="hamburger">
+                <img src="/assets/menu-edited.png" alt="Hamburger Icon" id="hamburger-Image" />
+            </div>
+        </div>
+        <div class="bgImageContainer"></div>
+        <div class="container">
+            <div class="innerContainer">
+                <div class="first">
+                    <h1 class="header1">LET'S BE SUCCESSFUL TOGETHER</h1>
+                    <p class="tag1">NAME *</p>
+                    <!-- <textarea rows="1" cols="20" name="" id="Name"></textarea> -->
+                    <input class="fill-form" type="text" placeholder="Your Name">
+                    <p class="tag2">EMAIL *</p>
+                    <input class="fill-form" type="text" placeholder="Your Email">
+                    <p class="tag3">MESSAGE *</p>
+                    <textarea class="message-box" name="" id=""></textarea>
+                    <button onclick='sendMail()' id="submit">Submit</button>
+                </div>
+                <div class="second">
+                    <h1 class="header2">AT YOUR SERVICE</h1>
+                    <div class="inner">
+                        <p class="address">General questions & Media inquiries, <br><br> Partnership Questionnaire Request,
+                            
+                            <br><br> Sales inquiries, Wholesale info, Collaborations <br><br>
+
+                           please fill contact form
+                            <!-- <span> info@oiseaumerveilleux.fr</span> -->
+                        </p>
+                        <div class="social">
+                            <img src="/assets/facebook.png" alt="" class="socialicon fb">
+                            <img src="/assets/linkedin.png" alt="" class="socialicon linkedin">
+                            <img src="/assets/instagram.png" alt="" class="socialicon instagram">
+                        </div>
+                        <p class="contact">Parent company : <span style="margin-right: 10px;"></span> 
+                            <span class="line-break" ><br></span>
+                            <span class="heading-gap" > ÔLAB </span>
+                            <span class="heading-gap" > FINE </span> 
+                            <span class="heading-gap" > BRANDS </span>
+                            <span class="heading-gap" > GROUP </span>
+                            
+                           <br> www.olab.fr</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("xqoRl9Dl-g1Hnw7gs");
+        })();
+    </script>
+    <script>
+        function sendMail(params) {
+            let tempParams = {
+                Name: document.getElementById("Name").value,
+                Email: document.getElementById("Email").value,
+                Message: document.getElementById("Message").value
+            };
+
+            emailjs.send('service_h0lbgrm', 'template_a7ggmiv', tempParams)
+                .then(function (res) {
+                    alert("We have recieved your message.")
+
+                })
+
+        }
+        document.getElementById("submit").addEventListener("click", () => {
+            document.getElementById("Name").value = "";
+            document.getElementById("Email").value = "";
+            document.getElementById("Message").value = "";
+        })
+
+        if (window.matchMedia("(max-width: 768px)").matches) {
+
+            const closeIcon2 = document.querySelector(".close-Icon2")
+            const closeIcon = document.querySelector(".close-Icon")
+            const otherBurger = document.querySelector(".hamburger");
+            const otherMenu = document.querySelector(".hamburger-Menu")
+
+            otherBurger.addEventListener("click", () => {
+                otherMenu.style.left = "0vw";
+            })
+            closeIcon.addEventListener("click", () => {
+                otherMenu.style.left = "-100vw";
+            })
+
+        }
+
+
+        if (window.matchMedia("(min-width: 769px)").matches) {
+            const hamburger = document.querySelector(".hamburger");
+            const hamburgerMenu = document.querySelector(".hamburger-Menu")
+            const closeIcon = document.querySelector(".close-Icon")
+            hamburger.addEventListener("click", () => {
+                hamburgerMenu.style.left = "0";
+                hamburgerMenu.style.height = "100vh";
+            })
+            closeIcon.addEventListener("click", () => {
+                hamburgerMenu.style.height = "0vw";
+                hamburgerMenu.style.left = "-100vw";
+            })
+        }
+    </script>
+</body>
